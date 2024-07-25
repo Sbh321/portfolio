@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #080808;
+}
+#header {
+  padding: 10px 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* position: sticky;
+  top: 0;
+  background-color: #080808; */
+}
+.fas {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+.ppt:hover .fas {
+  transform: rotate(180deg);
+}
+
+.ppt div {
+  cursor: pointer;
+  user-select: none;
+}
+.ppt {
+  position: relative;
+}
+.dd {
+  margin-right: 10px;
+}
+.drop-down {
+  left: 0%;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+  width: 195px;
+}
+.drop-down a {
+  line-height: 2;
+}
+.ppt:hover .drop-down {
+  display: block;
+}
+.nav-button {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-button a {
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  position: relative;
+}
+.nav-button a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.nav-button a:hover::after {
+  width: 100%;
+}
+
+.flex-logo {
+  flex: 1;
+}
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+.introduction {
+  margin-top: 200px;
+  color: white;
+  padding: 0px 5%;
+  display: inline-block;
+  flex: 1.5;
+}
+.intro-flex {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  padding: 40px 5%;
+}
+.image-card {
+  flex: 1;
+  text-align: center;
+}
+.image {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  text-align: center;
+  border-radius: 15px;
+}
+.profile {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.profile button {
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile button:hover {
+  color: #ff004f;
+}
+
+/* -------------about---------- */
+#about {
+  padding: 100px 8%;
+}
+.about-info {
+  display: flex;
+  justify-content: space-between;
+  flex: wrap;
+}
+.about-col1 {
+  flex-basis: 35%;
+}
+.about-col1 img {
+  width: 330px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.about-col2 {
+  flex-basis: 75%;
+}
+.about-col2 h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.about-intro-name {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 13px;
+}
+.about-intro-name span {
+  color: #ff3173;
+}
+.about-col2 p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5;
+}
+.download-button {
+  color: white;
+  background: #ff004f;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  transition: 0.3s;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 18px;
+}
+.download-button:hover {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+/* ---------portfilio---------- */
+#portfolio {
+  padding: 80px 8%;
+  margin-top: 20px;
+}
+#portfolio h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  color: white;
+}
+.work {
+  width: 350px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.layer h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  line-height: 1.5;
+  text-align: center;
+  transition: height 0.5s;
+}
+.layer svg {
+  margin-top: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  border-radius: 15px;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+
+/* ----------contact--------- */
+#contact {
+  padding: 80px 8%;
+  margin-bottom: 50px;
+}
+#contact h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.contact-flex {
+  display: flex;
+}
+.num {
+  flex: 1.5;
+}
+.mail {
+  flex: 2;
+}
+input,
+textarea {
+  display: block;
+  margin-bottom: 15px;
+  width: 600px;
+  height: 62px;
+  border: none;
+  border-radius: 30px;
+  padding-left: 37px;
+  background: #262626;
+  color: white;
+  outline: none;
+  font-size: 18px;
+}
+input::placeholder {
+  font-weight: bold;
+  font-size: 18px;
+}
+.message {
+  height: 150px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.button1 {
+  color: white;
+  background: #ff004f;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  transition: 0.3s;
+  height: 50px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top: 18px;
+}
+.button1:hover {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.num p,
+.svg {
+  color: white;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+.num button {
+  margin-top: 50px;
+}
+.more-button {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+
+  transition: 0.3s;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-right: 25px;
+}
+.more-button:hover {
+  color: white;
+  background-color: #ff004f;
+  border: 2px solid rgb(0, 0, 0);
+}
+.code {
+  margin-bottom: 17px;
+  margin-left: 600px;
+  fill: white;
+}
+.code,
+.codea {
+  cursor: pointer;
+}
+.codea {
+  margin-bottom: 17px;
+  margin-left: 600px;
+  fill: #ff004f;
+  display: inline-block;
+  vertical-align: middle;
+}
+.code,
+.head1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.skill {
+  color: white;
+  margin-top: 60px;
+}
+.skill h2 {
+  margin-bottom: 20px;
+}
+.skill svg {
+  vertical-align: middle;
+  margin-right: 15px;
+}
